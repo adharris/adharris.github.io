@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<header>
+    <div>
+        <h1>{{ page.contact.name }}</h1>
+        <div class='title'>{{ page.contact.title }}</div>
+    </div>
+    <div class="contact">
+        <a href='mailto:{{ page.contact.email }}'>{{ page.contact.email }}</a><br />
+        {% if page.contact.phone %}<span class='phone'>{{ page.contact.phone }}</span><br />{% endif %}        
+        {% for social in page.contact.social %}
+        <a href='{{ social.url }}' class="{{ social.type }}">{{ social.url }}</a><br />
+        {% endfor %}
+    </div>
+</header>
+
+<section>
+    {{ content }}
+</section>
+
+<section class="employment">
+    <h2 class='section-title'>Experience</h2>
+    
+    {% for emp in page.employment %}
+    <div class='employer'>
+    
+        <div class="details">
+            <label>{{ emp.name }}</label>
+            <div class="title">{{ emp.title }}</div>
+            <div class="date">{{ emp.dates }}</div>
+        </div>
+        
+        {% if emp.responsibilities %}
+        <ul class="responsibilities">
+            {% for rep in emp.responsibilities %}
+            <li>{{ rep }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endfor %}
+</section>
+
+<section class="technology">
+    <h2 class='section-title'>Technology</h2>
+    <ul class='technology-list'>
+        {% for type in page.technology %}
+        <li>
+            <label class='technology-label'>{{ type.label }}</label>
+            <ul class='technology-items'>
+                {% for item in type.items %}
+                <li>{{ item.name }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section>
+    <h2 class='section-title'>Education</h2>
+    <div class="institution">{{ page.education.institution }}</div>
+    <div class="dates">{{ page.education.dates }}</div>
+    <div class='degree'>{{ page.education.degree }}</div>
+    <div class='minor'>Minor in {{ page.education.minor }}</div>
+</section>
