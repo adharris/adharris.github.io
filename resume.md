@@ -10,8 +10,8 @@ contact:
   social:
     - type: github
       url: https://github.com/adharris
-#    - type: linkedin
-#      url: https://www.linkedin.com/in/andrew-harris/
+    - type: linkedin
+      url: https://www.linkedin.com/in/andrew-harris/
 
 education:
     institution: University of California, Irvine
@@ -66,7 +66,7 @@ technology:
   - label: Languages
     items:
       - name: Python
-      - name: Javascript
+      - name: Javascript/TypeScript
       - name: HTML/CSS
       - name: Go
       - name: PHP
@@ -104,10 +104,17 @@ technology:
   nonprofit settings.
 - Experience gathering requirements from users and shareholders, designing
   systems that meet the specific needs of the organization.
-- Comfortable with full stack development; experience with configuring servers,
+- Responsible for full stack development; experience with configuring servers,
   designing APIs, and building the application frontend.
+- Designed and built YouthBuild's database for student outcomes and grant
+  deliverables; a large web application built with Python, PostgreSQL, and
+  Angular.
 - Knowledgeable about the specific needs of Non Profits, such as dealing with 
   limited resources, dated technology, and complex requirements due to 
   multiple funding sources.
 - Effective technical communication skills. Experience communicating technical
   requirements and problems to team members without a technical focus.
+- Responsible for vetting and testing new technologies and practices, such as
+  containerization via Docker, real-time web with WebSockets, and DevOps
+  orchestration using Ansible.
+
